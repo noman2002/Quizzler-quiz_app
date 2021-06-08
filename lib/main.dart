@@ -51,6 +51,7 @@ class _QuizPageState extends State<QuizPage> {
           child: Padding(
             padding: EdgeInsets.all(15.0),
             child: TextButton(
+              
               // textColor: Colors.white,
               // color: Colors.green,
               child: Text(
@@ -84,7 +85,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        // Add a Row here as your score keeper
       ],
     );
   }
