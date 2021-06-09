@@ -86,7 +86,10 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Row(
           children: [
-            Icon(Icons.check),
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
           ],
         ),
       ],
