@@ -84,7 +84,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
-        // Add a Row here as your score keeper
+        
       ],
     );
   }
