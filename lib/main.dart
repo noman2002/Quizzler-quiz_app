@@ -88,7 +88,11 @@ class _QuizPageState extends State<QuizPage> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  questionNumber++;
+                });
+              },
             ),
           ),
         ),
