@@ -109,9 +109,11 @@ class _QuizPageState extends State<QuizPage> {
                 } else {
                   print("wrong Answer");
                 }
-                setState(() {
-                  questionNumber++;
-                });
+                setState(
+                  () {
+                    questionNumber++;
+                  },
+                );
               },
             ),
           ),
