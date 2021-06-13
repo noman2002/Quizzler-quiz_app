@@ -29,27 +29,26 @@ class QuizPage extends StatefulWidget {
 class _QuizPageState extends State<QuizPage> {
   List<Widget> scoreKeeper = [];
 
-  void checkAnswer(bool userPickedAnswer){
-bool? correctAnswer = quizBrain.getCorrectAnswer();
-                setState(
-                  () {
-                    quizBrain.nextQuestion();
-                    if (correctAnswer == true) {
-                      scoreKeeper.add(Icon(
-                        Icons.check,
-                        color: Colors.green,
-                      ));
-                    } else {
-                      scoreKeeper.add(
-                        Icon(
-                          Icons.close,
-                          color: Colors.red,
-                        ),
-                      );
-                    }
-                  },
-                );
-    
+  void checkAnswer(bool userPickedAnswer) {
+    bool? correctAnswer = quizBrain.getCorrectAnswer();
+    setState(
+      () {
+        quizBrain.nextQuestion();
+        if (userPickedAnswer == correctAnswer) {
+          scoreKeeper.add(Icon(
+            Icons.check,
+            color: Colors.green,
+          ));
+        } else {
+          scoreKeeper.add(
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            ),
+          );
+        }
+      },
+    );
   }
 
   QuizBrain quizBrain = QuizBrain();
@@ -88,9 +87,7 @@ bool? correctAnswer = quizBrain.getCorrectAnswer();
                   fontSize: 20.0,
                 ),
               ),
-              onPressed: () {
-                
-              },
+              onPressed: () {},
             ),
           ),
         ),
@@ -106,26 +103,7 @@ bool? correctAnswer = quizBrain.getCorrectAnswer();
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {
-                bool? correctAnswer = quizBrain.getCorrectAnswer();
-
-                setState(
-                  () {
-                    quizBrain.nextQuestion();
-                    if (correctAnswer == false) {
-                      scoreKeeper.add(Icon(
-                        Icons.check,
-                        color: Colors.green,
-                      ));
-                    } else {
-                      scoreKeeper.add(Icon(
-                        Icons.close,
-                        color: Colors.red,
-                      ));
-                    }
-                  },
-                );
-              },
+              onPressed: () {},
             ),
           ),
         ),
