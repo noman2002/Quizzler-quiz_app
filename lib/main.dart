@@ -96,10 +96,12 @@ class _QuizPageState extends State<QuizPage> {
                         color: Colors.green,
                       ));
                     } else {
-                      scoreKeeper.add(Icon(
-                        Icons.close,
-                        color: Colors.red,
-                      ));
+                      scoreKeeper.add(
+                        Icon(
+                          Icons.close,
+                          color: Colors.red,
+                        ),
+                      );
                     }
                   },
                 );
