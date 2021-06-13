@@ -31,7 +31,7 @@ class _QuizPageState extends State<QuizPage> {
 
   QuizBrain quizBrain = QuizBrain();
 
-  int questionNumber = 0;
+  
 
   @override
   Widget build(BuildContext context) {
