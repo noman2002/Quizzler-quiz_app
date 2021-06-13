@@ -75,15 +75,21 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 bool correctAnswer = answers[questionNumber];
-                if (correctAnswer == true) {
-                  print("right Answer");
-                } else {
-                  print("wrong Answer");
-                }
 
                 setState(
                   () {
                     questionNumber++;
+                    if (correctAnswer == true) {
+                      scoreKeeper.add(Icon(
+                        Icons.check,
+                        color: Colors.green,
+                      ));
+                    } else {
+                      scoreKeeper.add(Icon(
+                        Icons.close,
+                        color: Colors.red,
+                      ));
+                    }
                   },
                 );
               },
@@ -114,7 +120,10 @@ class _QuizPageState extends State<QuizPage> {
                         color: Colors.green,
                       ));
                     } else {
-                      print("wrong Answer");
+                      scoreKeeper.add(Icon(
+                        Icons.close,
+                        color: Colors.red,
+                      ));
                     }
                   },
                 );
