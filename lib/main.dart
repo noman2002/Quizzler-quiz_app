@@ -87,7 +87,9 @@ class _QuizPageState extends State<QuizPage> {
                   fontSize: 20.0,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                checkAnswer(true);
+              },
             ),
           ),
         ),
@@ -103,7 +105,9 @@ class _QuizPageState extends State<QuizPage> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                checkAnswer(false);
+              },
             ),
           ),
         ),
