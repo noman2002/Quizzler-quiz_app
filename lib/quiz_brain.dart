@@ -34,7 +34,7 @@ class QuizBrain {
   getQuestionText(int questionNumber) {
     return _questionBank[questionNumber].questionText;
   }
-  getQuestionAnswer(int questionNumber) {
+  getCorrectAnswer(int questionNumber) {
     return _questionBank[questionNumber].questionAnswer;
   }
 }

@@ -69,7 +69,7 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 bool? correctAnswer =
-                    quizBrain.getQuestionAnswer(questionNumber);
+                    quizBrain.getCorrectAnswer(questionNumber);
                 setState(
                   () {
                     questionNumber++;
@@ -106,7 +106,7 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 bool? correctAnswer =
-                    quizBrain.getQuestionAnswer(questionNumber);
+                    quizBrain.getCorrectAnswer(questionNumber);
 
                 setState(
                   () {
