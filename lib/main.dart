@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:quizzler/quiz_brain.dart';
 
 void main() => runApp(Quizzler());
 
@@ -28,9 +28,8 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   List<Widget> scoreKeeper = [];
- 
 
- 
+  QuizBrain quizBrain = QuizBrain();
 
   int questionNumber = 0;
 
@@ -46,7 +45,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                questionBank[questionNumber].questionText,
+                quizBrain.questionBank[questionNumber].questionText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -69,7 +68,8 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                bool? correctAnswer = questionBank[questionNumber].questionAnswer;
+                bool? correctAnswer =
+                    quizBrain.questionBank[questionNumber].questionAnswer;
 
                 setState(
                   () {
@@ -106,7 +106,8 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                bool? correctAnswer = questionBank[questionNumber].questionAnswer;
+                bool? correctAnswer =
+                    quizBrain.questionBank[questionNumber].questionAnswer;
 
                 setState(
                   () {
