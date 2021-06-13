@@ -104,14 +104,17 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 bool correctAnswer = answers[questionNumber];
-                if (correctAnswer == false) {
-                  print("right Answer");
-                } else {
-                  print("wrong Answer");
-                }
+
                 setState(
                   () {
                     questionNumber++;
+                    if (correctAnswer == false) {
+                      scoreKeeper.add(
+                        Icon(Icons.check)
+                      );
+                    } else {
+                      print("wrong Answer");
+                    }
                   },
                 );
               },
