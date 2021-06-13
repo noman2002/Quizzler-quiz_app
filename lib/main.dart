@@ -109,9 +109,10 @@ class _QuizPageState extends State<QuizPage> {
                   () {
                     questionNumber++;
                     if (correctAnswer == false) {
-                      scoreKeeper.add(
-                        Icon(Icons.check)
-                      );
+                      scoreKeeper.add(Icon(
+                        Icons.check,
+                        color: Colors.green,
+                      ));
                     } else {
                       print("wrong Answer");
                     }
